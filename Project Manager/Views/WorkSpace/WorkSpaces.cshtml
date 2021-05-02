@@ -1,0 +1,230 @@
+﻿@model IEnumerable<Project_Manager.Models.ProjectName>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Get Started | Project Manager</title>
+    <link rel="stylesheet" href="~/Content/WorkSpaceStylesheet.css" />
+    <link rel="canonical" href="https://slack.com/get-started">
+
+    <link rel="alternate" hreflang="en-us" href="https://slack.com/get-started">
+
+    <link rel="alternate" hreflang="en-au" href="https://slack.com/intl/en-au/get-started">
+
+    <link rel="alternate" hreflang="en-gb" href="https://slack.com/intl/en-gb/get-started">
+
+    <link rel="alternate" hreflang="en-in" href="https://slack.com/intl/en-in/get-started">
+
+    <link rel="alternate" hreflang="en-ca" href="https://slack.com/intl/en-ca/get-started">
+
+    <link rel="alternate" hreflang="fr-ca" href="https://slack.com/intl/fr-ca/get-started">
+
+    <link rel="alternate" hreflang="fr-fr" href="https://slack.com/intl/fr-fr/get-started">
+
+    <link rel="alternate" hreflang="de-de" href="https://slack.com/intl/de-de/get-started">
+
+    <link rel="alternate" hreflang="es-es" href="https://slack.com/intl/es-es/get-started">
+
+    <link rel="alternate" hreflang="es-419" href="https://slack.com/intl/es-la/get-started">
+
+    <link rel="alternate" hreflang="ja-jp" href="https://slack.com/intl/ja-jp/get-started">
+
+    <link rel="alternate" hreflang="pt-br" href="https://slack.com/intl/pt-br/get-started">
+
+    <link rel="alternate" hreflang="x-default" href="https://slack.com/get-started">
+
+    <link rel="alternate" hreflang="it-it" href="https://slack.com/intl/it-it/get-started">
+
+    <link rel="alternate" hreflang="ko-kr" href="https://slack.com/intl/ko-kr/get-started">
+
+    <link rel="alternate" hreflang="zh-cn" href="https://slack.com/intl/zh-cn/get-started">
+
+    <link rel="alternate" hreflang="zh-tw" href="https://slack.com/intl/zh-tw/get-started">
+    <link href="https://a.slack-edge.com/2bc3899/style/rollup-slack_kit_legacy_adapters.css" rel="stylesheet" type="text/css" onload="window._cdn ? _cdn.ok(this, arguments) : null" onerror="window._cdn ? _cdn.failed(this, arguments) : null" crossorigin="anonymous">
+    <link href="https://a.slack-edge.com/ea37b/style/libs/lato-2-compressed.css" rel="stylesheet" type="text/css" onload="window._cdn ? _cdn.ok(this, arguments) : null" onerror="window._cdn ? _cdn.failed(this, arguments) : null" crossorigin="anonymous">
+    <link href="https://a.slack-edge.com/793ae/style/_generic.typography.larsseit.css" rel="stylesheet" type="text/css" onload="window._cdn ? _cdn.ok(this, arguments) : null" onerror="window._cdn ? _cdn.failed(this, arguments) : null" crossorigin="anonymous">
+    <link id="favicon" rel="shortcut icon" href="https://a.slack-edge.com/80588/marketing/img/meta/favicon-32.png" sizes="16x16 32x32 48x48" type="image/png">
+</head>
+<body class="full_height">
+    <div id="get_started_app_root" data-qa="page_contents" class="get-started-app-root" data-reactroot="">
+        <header class="p-refreshed_page__header">
+            <div class="left-col"></div>
+            @*<div class="center-col">
+                <a class="c-link" href="@Url.Action("Login","Acc")">Log Out</a>*@
+            @*<a target="_self" class="c-link" href="https://slack.com" rel="noopener noreferrer">
+                <img alt="Slack" src="https://a.slack-edge.com/bv1-9/slack_logo-ebd02d1.svg" height="34" title="Slack"></a>*@
+            @*</div>*@
+            <div class="right-col" style="margin-right:-500px;margin-top:-40px;">
+                <div class="p-refreshed_page__header_sidelink">
+                    Want To Sign Out Of Project Manager?<br>
+                    <a target="_self" class="c-link bold" href="@Url.Action("Login","Acc")" rel="noopener noreferrer" style="color:#1264a3;">Log Out</a>
+                </div>
+            </div>
+        </header>
+        <div class="p-refreshed_page">
+            <h1 class="p-refreshed_page__heading p-workspaces_view__heading">
+                <span class="p-workspaces_view__heading--aubergine">
+                    Welcome back!
+                </span> Stay hydrated!
+            </h1>
+            <div class="p-refreshed_page__sub_heading p-workspaces_view__subheading">
+                Choose a workspace below to get back to working with your team.
+            </div>
+            @*WorkSpace Section*@
+            <div class="p-workspaces_view__container">
+                <div class="p-your_workspaces p-workspaces_view__your_workspaces">
+                    <section data-qa="current_workspaces_list" class="p-workspaces_list">
+                        <div class="p-workspaces_list__panel">
+                            <div class="p-workspaces_list__panel_subtitle">
+                                <h4>Workspaces for <strong>@ViewBag.Name</strong></h4>
+                            </div>
+                            @foreach (var item in Model)
+                            {
+                                <div class="p-expanding_workspace_list">
+                                    <div class="p-expanding_workspace_list__header">
+                                    </div>
+                                    <div class="p-expanding_workspace_list__workspaces p-expanding_workspace_list__workspaces--no_toggle">
+                                        <a target="_blank" class="c-link p-workspaces_list__link" data-qa="current_workspaces_open_link" href="@Url.Action("Projects","WorkSpace")" rel="noopener noreferrer">
+                                            <div class="p-workspace_info">
+                                                <i class="c-team_icon p-workspace_info__icon" role="img" aria-label="Lewis University CaMS" style="height: 44px; width: 44px; min-width: 44px; font-size: 24px; line-height: 44px; white-space: nowrap; background-image: url(&quot;https://avatars.slack-edge.com/2017-07-10/211268366566_d28f748e2172652f1db9_88.png&quot;);">
+                                                </i>
+                                                <div class="p-workspace_info__content">
+                                                    <div class="p-workspace_info__title" style="text-align:left;">
+                                                        @item.ProjectName1
+                                                    </div>
+                                                    <div class="p-workspace_info__members">
+                                                        <div class="avatar_stack">
+                                                            <img class="avatar" src="https://avatars.slack-edge.com/2017-09-06/236939152754_f507b9d32c6d60c32ec4_48.jpg" alt="User Avatar">
+                                                            <img class="avatar" src="https://secure.gravatar.com/avatar/557a8108b0fbc48b3bc493f8117fdc2b.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" alt="User Avatar">
+                                                            <img class="avatar" src="https://secure.gravatar.com/avatar/bde45f3f97e30173a6b1d835a97d335d.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-48.png" alt="User Avatar">
+                                                            <img class="avatar" src="https://secure.gravatar.com/avatar/b9335bd660a921229de4cc0a9596fbf9.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" alt="User Avatar">
+                                                            <img class="avatar" src="https://secure.gravatar.com/avatar/55519dcc50b53ee81232bb87d3b45e1b.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" alt="User Avatar">
+                                                        </div>
+                                                        <div class="count">@item.ProjectName1.Count() members</div>
+                                                    </div>
+                                                </div>
+                                                <div class="p-workspace_info__action">
+                                                    <span class="p-workspaces_list__link_icon_text">Open</span>
+                                                    <i class="c-icon c-icon--arrow-right-medium fas fa-arrow-right" type="arrow-right-medium" aria-hidden="true">
+                                                    </i>
+                                                </div>
+                                            </div>
+                                            <span aria-label="(opens in new tab)"></span>
+                                        </a><hr data-qa="workspace_list_divider" class="p-workspaces_list__workspaces_list_divider">
+                                        <a target="_blank" class="c-link p-workspaces_list__link" data-qa="current_workspaces_open_link" href="https://lewisuworld.slack.com/ssb/redirect?entry_point=your_workspaces" rel="noopener noreferrer">
+                                        </a>
+
+                                    </div>
+                                </div>
+                            }
+
+                        </div>
+                    </section>
+                    <div class="p-create_workspace_banner">
+                        <span class="display_flex align_items_center">
+                            <img src="https://a.slack-edge.com/bv1-9/get-started-workspaces-icon-88e0cb1.svg" class="p-create_workspace_banner__image" alt="">Want to use Slack with a different team?
+                        </span>
+                        <a target="_self" class="c-link c-button c-button--outline c-button--medium p-create_workspace_banner__button" href="@Url.Action("Add_WorkSpace")" rel="noopener noreferrer">Create Another Workspace</a>
+                    </div>
+                    <section data-qa="invited_workspaces_list" class="p-workspaces_list__invitations p-workspaces_list">
+                        <h3 style="text-align:center;">
+                            Pending invitations
+                        </h3>
+                        <div class="p-workspaces_list__panel">
+                            <div class="p-workspaces_list__panel_subtitle">
+                                <h4>Invitations for <strong>ahsanrasheed@lewisu.edu</strong></h4>
+                            </div>
+                            <div class="p-workspaces_list__joins p-workspaces_list__invitations_panel--padded">
+                                <div class="p-expanding_workspace_list">
+                                    <div class="p-expanding_workspace_list__header">
+                                        <div class="p-workspaces_list__join_details">
+                                            <i class="c-icon c-icon--envelope-o" type="envelope-o" aria-hidden="true"></i><span class="invited_by">Anyone with lewisu.edu can join</span>
+                                        </div>
+                                    </div>
+                                    <div class="p-expanding_workspace_list__workspaces">
+                                        <div class="p-workspace_info">
+                                            <i class="c-team_icon p-workspace_info__icon" role="img" aria-label="Remote Academia 2020" style="height: 44px; width: 44px; min-width: 44px; font-size: 24px; line-height: 44px; white-space: nowrap; background-image: url(&quot;https://avatars.slack-edge.com/2020-03-11/993195284388_d7c7a374e68fb8218dab_88.jpg&quot;);"></i>
+                                            <div class="p-workspace_info__content">
+                                                <div class="p-workspace_info__title">
+                                                    Remote Academia 2020
+                                                </div>
+                                                <div class="p-workspace_info__members">
+                                                    <div class="avatar_stack">
+                                                        <img class="avatar" src="https://secure.gravatar.com/avatar/eb4d6e1ce1ecea99e42d690428a0e12f.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0021-48.png" alt="User Avatar">
+                                                        <img class="avatar" src="https://secure.gravatar.com/avatar/915629ee3416e8731789f11c1e0cc683.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0007-48.png" alt="User Avatar">
+                                                        <img class="avatar" src="https://secure.gravatar.com/avatar/8ababbdfcb68b962309e09c1a1a74d1c.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" alt="User Avatar">
+                                                        <img class="avatar" src="https://secure.gravatar.com/avatar/a814ba1484ea19345ce711f06b0222c4.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0003-48.png" alt="User Avatar">
+                                                        <img class="avatar" src="https://secure.gravatar.com/avatar/5ce6ba2752962d1e9f1f48e67c8a007b.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0006-48.png" alt="User Avatar">
+                                                    </div>
+                                                    <div class="count">
+                                                        13,224 members
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-workspace_info__action">
+                                                <a target="_blank" class="c-link c-button c-button--outline c-button--medium p-workspaces_list__invitation_join_button" data-qa="domain_enabled_workspace_join_button" href="https://join.slack.com/t/remoteacademia/signup_confirmed/enQtMTA1NjEwMDE0ODc3MS00Mjc3MzBiMjIzZmMxZWJjYTdiMjgzM2RlNDU4ZGU5MjNmZjRhOGE4ZGFjOTI0ZGNhMDFkYjNiZTg1ODY4YzVk?" rel="noopener noreferrer">
+                                                    Join
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <br />
+                                        <div class="p-workspace_info">
+                                            <i class="c-team_icon p-workspace_info__icon" role="img" aria-label="MadHacks 2017" style="height: 44px; width: 44px; min-width: 44px; font-size: 24px; line-height: 44px; white-space: nowrap; background-image: url(&quot;https://avatars.slack-edge.com/2017-01-26/133204284931_d994d4cf5aa9472304a4_88.png&quot;);">
+                                            </i>
+                                            <div class="p-workspace_info__content">
+                                                <div class="p-workspace_info__title">
+                                                    MadHacks 2017
+                                                </div>
+                                                <div class="p-workspace_info__members">
+                                                    <div class="avatar_stack">
+                                                        <img class="avatar" src="https://secure.gravatar.com/avatar/7a7b4fa578ced78e4d7b1cdec944742d.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-48.png" alt="User Avatar">
+                                                        <img class="avatar" src="https://secure.gravatar.com/avatar/f0c5793e9f2a8c89535be9540c920c82.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-48.png" alt="User Avatar">
+                                                        <img class="avatar" src="https://secure.gravatar.com/avatar/243a9dc6d3fab99032571fa393840bdd.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0021-48.png" alt="User Avatar">
+                                                        <img class="avatar" src="https://secure.gravatar.com/avatar/61bdc66248ec03d394b6752f33762bc9.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0019-48.png" alt="User Avatar">
+                                                        <img class="avatar" src="https://secure.gravatar.com/avatar/71435396cf9adb0d4d31b28cb5a2d45f.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0020-48.png" alt="User Avatar">
+                                                    </div>
+                                                    <div class="count">
+                                                        440 members
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="p-workspace_info__action">
+                                                <a target="_blank" class="c-link c-button c-button--outline c-button--medium p-workspaces_list__invitation_join_button" data-qa="domain_enabled_workspace_join_button" href="https://join.slack.com/t/madhacks2017/signup_confirmed/enQtMTA1NjEwMDE0OTUwNy0yMDRjZTJjNTBjZTE0MTIxZmJmNzFmZDhhNzk5ZDM3NWVkYmRkMGVhYjZjNWQ3YjBiNWM1NjY4YTRiYjQ2NTU2?" rel="noopener noreferrer">
+                                                    Join
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="c-button-unstyled p-expanding_workspace_list__expander" data-qa="expand_workspace_list" type="button">
+                                        Show 18 more workspaces<i class="c-icon c-icon--chevron-down" type="chevron-down" aria-hidden="true">
+                                        </i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="p-workspaces_view__different_email">
+                        <p class="margin_bottom_0 sk_dark_gray">Not seeing your workspace?</p>
+                        <button class="c-link--button" type="button">
+                            Try a different email
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*Footer Section*@
+        <footer class="p-refreshed_page__footer">
+            <a target="_blank" class="c-link c-button-unstyled p-refreshed_page__footer_link p-refreshed_page__footer_link--main" href="/legal" rel="noopener noreferrer">Privacy &amp; Terms</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a target="_blank" class="c-link c-button-unstyled p-refreshed_page__footer_link p-refreshed_page__footer_link--main" href="/help/contact" rel="noopener noreferrer">Contact Us</a>
+        </footer>
+        @*<span><em>© Copyright 2021 Fanny & Ahsan. All rights reserved. Various trademarks held by their respective owners.</em></span>*@
+    </div>
+</body>
+</html>

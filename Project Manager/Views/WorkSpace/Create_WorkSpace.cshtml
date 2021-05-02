@@ -1,0 +1,821 @@
+﻿@model Project_Manager.Models.ProjectName
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Project Manager | Add Project</title>
+    <style>
+        .supports_custom_scrollbar {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            overflow: hidden;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+        }
+
+        .p-client_container {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+        }
+
+        .p-client {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            overflow: hidden;
+            background: rgba(var(--sk_primary_background,255,255,255),1);
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-rows: 38px auto min-content;
+            grid-template-columns: auto;
+            grid-template-areas: "p-client--iap1__top_nav" "p-client__workspace" "p-client__banners";
+        }
+
+        .p-top_nav {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            grid-area: p-client--iap1__top_nav;
+            min-width: 0;
+            -webkit-app-region: drag;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 203;
+            background: #350d36;
+            color: #FFFFFF;
+            box-shadow: 0 1px 0 0 rgba(255,255,255,0.1);
+        }
+
+        .p-workspace-layout {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            display: grid;
+            grid-template-rows: auto;
+            overflow: hidden;
+            position: relative;
+            grid-template-columns: 200px auto;
+            grid-template-areas: 'p-workspace__sidebar p-workspace__primary_view';
+        }
+
+        .p-workspace__sidebar {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            grid-area: p-workspace__sidebar;
+            display: grid;
+            grid-template-columns: auto;
+            position: relative;
+            grid-template-areas: "p-workspace__channel_sidebar";
+            grid-template-rows: auto;
+            overflow: hidden;
+            width: 200px;
+        }
+
+        .p-workspace__channel_sidebar {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            grid-area: p-workspace__channel_sidebar;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+            min-width: 0;
+        }
+
+        .p-ia__sidebar_header--top-nav {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            position: relative;
+            display: flex;
+            align-items: stretch;
+            height: 64px;
+            background: rgb(82,38,83);
+            color: #FFFFFF;
+        }
+
+        .p-ia__sidebar_header__button {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            color: #FFFFFF;
+            box-sizing: inherit;
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            padding: 0 19px 0 16px;
+            transition-property: background-color,border-color;
+            transition-duration: 80ms;
+            transition-timing-function: cubic-bezier(.36,.19,.29,1);
+            border-bottom: 1px solid rgba(0,0,0,.1);
+            background-clip: padding-box;
+            position: relative;
+            z-index: 1;
+            flex-direction: row-reverse;
+            outline: none;
+            cursor: pointer;
+            padding-right: 54px;
+            background-color: initial;
+            border-color: rgb(82,38,83);
+            align-items: flex-start;
+            padding-top: 12px;
+        }
+
+        .p-ia__sidebar_header__info {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            color: #FFFFFF;
+            cursor: pointer;
+            box-sizing: inherit;
+            flex: 1;
+            min-width: 0;
+            order: 1;
+            border-color: rgba(0,0,0,.15);
+        }
+
+        .p-ia__sidebar_header__team_name {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            color: #FFFFFF;
+            cursor: pointer;
+            box-sizing: inherit;
+            display: flex;
+            align-items: center;
+            max-width: 100%;
+            padding-left: 4px;
+            margin-left: -4px;
+            border-color: rgba(0,0,0,.15);
+        }
+
+        .p-ia__sidebar_header__team_name {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            color: #FFFFFF;
+            cursor: pointer;
+            box-sizing: inherit;
+            min-width: 0;
+            font-weight: 900;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            display: block;
+            border-color: rgba(0,0,0,.15);
+        }
+
+        .p-channel_sidebar--classic_nav {
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            flex: 1;
+            position: relative;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            font-size: 15px;
+            background: #3F0E40;
+            color: rgb(188,171,188);
+            height: auto;
+            min-height: 0;
+            width: 100%;
+        }
+
+        .p-channel_sidebar__list {
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            color: rgb(188,171,188);
+            box-sizing: inherit;
+            flex: 1;
+            position: relative;
+        }
+
+        .c-virtual_list {
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            color: rgb(188,171,188);
+            box-sizing: inherit;
+            position: relative;
+            overflow: hidden;
+            outline: none;
+            width: 200px;
+            height: 653px;
+        }
+
+        .c-scrollbar__hider {
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            color: rgb(188,171,188);
+            box-sizing: inherit;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            outline: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: -50px;
+            bottom: 0;
+            height: 100%;
+            transform: translateZ(0);
+        }
+
+        .c-scrollbar__child {
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            color: rgb(188,171,188);
+            box-sizing: inherit;
+            width: 200px;
+        }
+
+        .c-virtual_list__scroll_container {
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            color: rgb(188,171,188);
+            box-sizing: inherit;
+            position: relative;
+            height: 0px;
+        }
+
+        .c-scrollbar__track {
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            color: rgb(188,171,188);
+            box-sizing: inherit;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+            bottom: 4px;
+            width: 8px;
+            display: none;
+        }
+
+        .resize-triggers {
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            color: rgb(188,171,188);
+            box-sizing: inherit;
+            animation: 1ms resizeanim;
+            visibility: hidden;
+            opacity: 0;
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .expand-trigger {
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            color: rgb(188,171,188);
+            visibility: hidden;
+            box-sizing: inherit;
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: #eee;
+            overflow: auto;
+        }
+
+        .contract-trigger {
+            line-height: 1.46668;
+            font-weight: 400;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            color: rgb(188,171,188);
+            visibility: hidden;
+            box-sizing: inherit;
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            background: #eee;
+            overflow: auto;
+        }
+
+        .p-resizer {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            position: absolute;
+            z-index: 1000;
+            top: 1px;
+            width: 8px;
+            bottom: 0;
+            user-select: none;
+            cursor: col-resize;
+            left: 196px;
+        }
+
+        .p-resizer__input {
+            -webkit-font-smoothing: antialiased;
+            user-select: none;
+            box-sizing: inherit;
+            font-family: inherit;
+            position: absolute;
+            margin: -1px;
+            border: 0;
+            padding: 0;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+        }
+
+        .p-workspace__primary_view {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            grid-area: p-workspace__primary_view;
+            display: grid;
+            grid-template-columns: auto;
+            min-width: 0;
+            min-height: 0;
+            grid-template-areas: "p-workspace__primary_view_contents";
+            grid-template-rows: auto;
+        }
+
+        .p-workspace__primary_view_contents {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            display: flex;
+            flex-direction: column;
+            grid-area: p-workspace__primary_view_contents;
+            min-width: 0;
+            min-height: 0;
+        }
+
+        .p-setup_page {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .p-setup_page__content {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            display: flex;
+            flex-direction: column;
+            padding: 32px 80px 64px 80px;
+            height: 100%;
+            max-width: 820px;
+        }
+
+        .p-setup_page__steps_counter {
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            flex-grow: 0;
+            margin-bottom: 24px;
+            font-size: 13px;
+            line-height: 1.38463;
+            font-weight: 400;
+        }
+
+        .p-autoclog__hook {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            display: contents;
+        }
+
+        .p-setup_page__header--has-subheader {
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+            font-size: 50px;
+            line-height: 56px;
+            font-family: Slack-Larsseit,Helvetica Neue,Helvetica,Segoe UI,Tahoma,Arial,sans-serif;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .p-setup_page__subheader--deprecated-margin {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+
+        .offscreen {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            position: absolute;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            padding: 0;
+            border: 0;
+            user-select: none;
+        }
+
+        .c-input_character_count {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            position: relative;
+            z-index: 2;
+        }
+
+        .c-label {
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            font-size: 15px;
+            line-height: 1.46666667;
+            display: flex;
+            align-items: baseline;
+            vertical-align: middle;
+            margin-bottom: 4px;
+            cursor: pointer;
+            font-weight: 400;
+        }
+
+        .c-label__text {
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            line-height: 1.46666667;
+            cursor: pointer;
+            box-sizing: inherit;
+            display: block;
+            order: 1;
+            padding-bottom: 0;
+            font-weight: 400;
+            position: relative;
+            top: -1px;
+        }
+
+        .c-input_checkbox {
+            -webkit-font-smoothing: antialiased;
+            font-family: inherit;
+            box-sizing: border-box;
+            display: block;
+            flex: none;
+            margin: 0 12px 0 0;
+            padding: 0 12px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .c-button--large {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: inherit;
+            font-family: inherit;
+            user-select: none;
+            outline: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            align-items: center;
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+            text-decoration: none;
+            background: #007a5a;
+            color: #fff;
+            box-shadow: none;
+            font-size: 18px;
+            font-weight: 900;
+            height: 44px;
+            padding: 0 16px 3px;
+            min-width: 200px;
+            max-width: 300px;
+            transition: none !important;
+            background-color: #4a154b;
+            margin-top: 48px;
+        }
+
+        .p-setup_page__footer {
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            flex-grow: 0;
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: 400;
+            margin-bottom: 16px;
+        }
+
+        .c-input_text--large {
+            -webkit-font-smoothing: antialiased;
+            font-family: inherit;
+            border-radius: 4px;
+            --saf-0: rgba(var(--sk_foreground_high_solid,134,134,134),1);
+            border: 1px solid var(--saf-0);
+            transition: border 80ms ease-out,box-shadow 80ms ease-out;
+            box-sizing: border-box;
+            margin: 0 0 20px;
+            width: 100%;
+            color: rgba(var(--sk_primary_foreground,29,28,29),1);
+            background-color: rgba(var(--sk_primary_background,255,255,255),1);
+            padding: 12px;
+            height: 44px;
+            padding-top: 11px;
+            padding-bottom: 13px;
+            font-size: 18px;
+            line-height: 1.33333333;
+            padding-right: 56px;
+        }
+    </style>
+
+</head>
+
+<body tabindex="-1" class="supports_custom_scrollbar p-client_desktop--ia-top-nav">
+    <div aria-hidden="true" style="position:absolute" tabindex="1">
+    </div>
+    <div class="p-client_container">
+        <div class="p-client">
+            <div class="p-top_nav"></div>
+            <div class="p-workspace-layout">
+                <div class="p-workspace__sidebar p-workspace__sidebar--tiny" style="width: 200px;">
+                    <div class="p-workspace__channel_sidebar" data-qa="ws_channel_sidebar">
+                        <div class="p-ia__sidebar_header p-ia__sidebar_header--top-nav p-ia__sidebar_header--v-team-creation-view" data-qa="minimal-header">
+                            <div data-qa="sidebar_header_button" class="p-ia__sidebar_header__button p-ia__sidebar_header__button--setup_team_name">
+                                <div class="p-ia__sidebar_header__info">
+                                    <div class="p-ia__sidebar_header__team_name">
+                                        <span class="p-ia__sidebar_header__team_name_text">Lewisu</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <nav data-qa-channel-sidebar="true" class="p-channel_sidebar p-channel_sidebar--classic_nav p-channel_sidebar--iap1 p-channel_sidebar--show_more_feature" aria-label="Channel Sidebar">
+                            <div class="p-channel_sidebar__list" style="position: relative;">
+                                <div style="overflow: visible; height: 0px; width: 0px;">
+                                    <div role="application">
+                                        <div tabindex="0" style="position: absolute; width: 1px; height: 1px; outline: none; box-shadow: none; top: 0px;">
+                                        </div>
+                                        <div role="list" aria-label="Selected channels" class="c-virtual_list c-virtual_list--scrollbar p-channel_sidebar__static_list c-scrollbar c-scrollbar--hidden" style="width: 200px; height: 653px;">
+                                            <div data-qa="slack_kit_scrollbar" role="presentation" class="c-scrollbar__hider">
+                                                <div role="presentation" class="c-scrollbar__child" style="width: 200px;">
+                                                    <div data-qa="slack_kit_list" class="c-virtual_list__scroll_container" role="presentation" style="position: relative; height: 0px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div role="presentation" class="c-scrollbar__track">
+                                                <div role="presentation" class="c-scrollbar__bar" tabindex="-1" style="height: 50px; transform: translateY(0px);">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div tabindex="0" style="position: absolute; width: 1px; height: 1px; outline: none; box-shadow: none; top: 0px;">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="resize-triggers">
+                                    <div class="expand-trigger">
+                                        <div style="width: 201px; height: 654px;">
+                                        </div>
+                                    </div>
+                                    <div class="contract-trigger">
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="p-resizer p-resizer--default" style="left: 196px;">
+                    <input type="range" aria-roledescription="vertical separator" class="p-resizer__input" min="180" max="250" step="10" aria-label="Width of the left column. Resize using your arrow keys or press Enter to use the default width." value="200">
+                </div>
+                <div role="main" aria-label="Setup Team Name" class="p-workspace__primary_view p-workspace__primary_view--tiny">
+                    <div class="p-workspace__primary_view_contents">
+                        <div class="p-setup_page">
+                            <div class="p-setup_page__content">
+                                <div data-qa="team_setup_step_counter" class="p-setup_page__steps_counter">
+                                    Step 1 of 1
+                                </div><div class="p-autoclog__hook">
+                                    <h2 class="p-setup_page__header p-setup_page__header--has-subheader">What’s the name of your company or team?</h2>
+                                    <p class="p-setup_page__subheader p-setup_page__subheader--deprecated-margin">This will be the name of your Project — choose something that your team will recognize.</p>
+                                    <form>
+                                        <span id="team-name-input-desc" class="offscreen">Enter the name of your company or team to create a Slack workspace.</span>
+                                        <div data-qa-formtext="true">
+                                            <div role="presentation" class="c-input_character_count c-input_character_count--large" data-qa="input_character_count">
+                                                <input @*data-qa="setup-page-team-name-input" aria-describedby="team-name-input-desc setup-page-team-name_hint setup-page-team-name_character-count" aria-invalid="false" aria-required="false" aria-label="" autocomplete="off"*@ class="c-input_text c-input_text--large" id="setup-page-team-name" name="team-name" placeholder="Ex: Acme Marketing or Acme Co" type="text" style="padding-right: 56px;">
+                                            </div>
+                                        </div>
+                                        <div class="p-autoclog__hook">
+                                            <label for="approved-domain-checkbox" class="c-label c-label--inline c-label--pointer c-label--with_formatted_text" data-qa-label="true" data-qa-label-type="inline">
+                                                <span class="c-label__text" data-qa-label-text="true">Let anyone with an <strong>lewisu.edu</strong> email join this workspace.</span>
+                                                <span data-qa-label-children="true"><input id="approved-domain-checkbox" type="checkbox" class="c-input_checkbox" checked=""></span>
+                                            </label>
+                                        </div>
+                                        <button id="project" class="c-button c-button--primary c-button--large p-setup_page__content_button p-setup_page__content_button--aubergine margin_top_300" @*data-qa="setup-page-team-name-submit" aria-label="Go to next step"*@ type="submit">
+                                            Next
+                                        </button>
+                                    </form>
+                                    <div class="p-setup_page__footer">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#project").click(function () {
+                var model = {};
+                var Input = $("#setup-page-team-name").val();
+                console.log(Input);
+                $.ajax({
+
+                    type: "POST",
+                    url: '@Url.Action("Create_WorkSpace", "WorkSpace")',
+                    data: { Input: Input },
+                    dataType: 'json',
+                    success: function () { }
+
+
+                })
+
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

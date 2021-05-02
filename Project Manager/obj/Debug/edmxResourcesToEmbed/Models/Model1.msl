@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LoginModelStoreContainer" CdmEntityContainer="LoginEntities">
+    <EntitySetMapping Name="ProjectNames">
+      <EntityTypeMapping TypeName="LoginModel.ProjectName">
+        <MappingFragment StoreEntitySet="ProjectName">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ProjectName1" ColumnName="ProjectName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sub_Project">
+      <EntityTypeMapping TypeName="LoginModel.Sub_Project">
+        <MappingFragment StoreEntitySet="Sub-Project">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Sub_Project1" ColumnName="Sub-Project" />
+          <ScalarProperty Name="Project_Name" ColumnName="Project Name" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logins">
+      <EntityTypeMapping TypeName="LoginModel.login">
+        <MappingFragment StoreEntitySet="login">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tagging_Functionality">
+      <EntityTypeMapping TypeName="LoginModel.Tagging_Functionality">
+        <MappingFragment StoreEntitySet="Tagging-Functionality">
+          <ScalarProperty Name="TagID" ColumnName="TagID" />
+          <ScalarProperty Name="TagName" ColumnName="TagName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

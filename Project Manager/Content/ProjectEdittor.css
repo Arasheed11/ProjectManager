@@ -1,0 +1,1346 @@
+﻿.supports_custom_scrollbar {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    overflow: hidden;
+    font-family: slack-lato,applelogo,sans-serif;
+}
+
+.p-client_container {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+}
+
+.p-client {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+    overflow: hidden;
+    background: rgba(var(--sk_primary_background,255,255,255),1);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 38px auto min-content;
+    grid-template-columns: auto;
+    grid-template-areas: "p-client--iap1__top_nav" "p-client__workspace" "p-client__banners";
+}
+
+.p-top_nav {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+    grid-area: p-client--iap1__top_nav;
+    min-width: 0;
+    -webkit-app-region: drag;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 203;
+    background: #350d36;
+    color: #ffffff;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.1);
+}
+
+.p-top_nav__sidebar {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    color: #ffffff;
+    box-sizing: inherit;
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    flex: 1;
+    min-width: 128px;
+    justify-content: flex-end;
+}
+
+.c-button-unstyled {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    background: none;
+    border: 0;
+    font: inherit;
+    margin: 0;
+    line-height: inherit;
+    overflow: initial;
+    padding: 0;
+    text-align: initial;
+    vertical-align: initial;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    opacity: .8;
+    color: #ffffff;
+    -webkit-app-region: no-drag;
+    margin-left: 0;
+}
+
+.c-icon--clock-o {
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    line-height: inherit;
+    text-align: initial;
+    cursor: pointer;
+    color: #ffffff;
+    box-sizing: inherit;
+    position: relative;
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-top_nav__search__container {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    color: #ffffff;
+    box-sizing: inherit;
+    position: relative;
+    flex: 2;
+    min-width: 0;
+    display: flex;
+    max-width: 320px;
+}
+
+.p-top_nav__search--windows {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    border: 0;
+    font: inherit;
+    margin: 0;
+    line-height: inherit;
+    overflow: initial;
+    text-align: initial;
+    vertical-align: initial;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    flex: 5;
+    height: 24px;
+    min-width: 0;
+    padding: 0 8px;
+    border-radius: 4px;
+    max-width: 320px;
+    color: #ffffff;
+    background: rgb(67,30,68);
+    box-shadow: inset 0 0 0 1px rgb(104,74,104);
+    -webkit-app-region: no-drag;
+    padding-right: 32px;
+}
+
+.c-icon--inherit {
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    line-height: inherit;
+    text-align: initial;
+    cursor: pointer;
+    color: #ffffff;
+    box-sizing: inherit;
+    position: relative;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    font-size: 18px;
+    transform: translatey(1px);
+    opacity: .8;
+    display: none;
+}
+
+.p-top_nav__search__text {
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    text-align: initial;
+    cursor: pointer;
+    color: #ffffff;
+    box-sizing: inherit;
+    font-size: 13px;
+    line-height: 1.38463;
+    font-weight: 400;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: .8;
+    margin-right: auto;
+}
+
+.margin_left_100 {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    color: #ffffff;
+    box-sizing: inherit;
+    position: relative;
+    margin-left: 16px;
+}
+
+.p-top_nav__help {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    background: none;
+    border: 0;
+    font: inherit;
+    margin: 0;
+    line-height: inherit;
+    overflow: initial;
+    padding: 0;
+    text-align: initial;
+    vertical-align: initial;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 4px;
+    opacity: .8;
+    color: #ffffff;
+    -webkit-app-region: no-drag;
+}
+
+.c-icon--question-circle {
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    line-height: inherit;
+    text-align: initial;
+    cursor: pointer;
+    color: #ffffff;
+    box-sizing: inherit;
+    position: relative;
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.p-top_nav__help__badge--dot {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+    position: absolute;
+    padding: 0 4px;
+    font-size: 9px;
+    border-radius: 8px;
+    color: #fff;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    box-shadow: 0 0 0 2px #350d36;
+    background: #ffffff;
+}
+
+.p-top_nav__right {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    color: #ffffff;
+    box-sizing: inherit;
+    flex: 1;
+    min-width: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 16px;
+    padding-left: 32px;
+    position: relative;
+}
+
+.p-top_nav__windows_controls_container {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    background: none;
+    border: 0;
+    font: inherit;
+    margin: 0;
+    line-height: inherit;
+    overflow: initial;
+    padding: 0;
+    text-align: initial;
+    vertical-align: initial;
+    cursor: pointer;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    position: relative;
+    display: inline-flex;
+    color: #ffffff;
+    -webkit-app-region: no-drag;
+    width: 28px;
+    height: 28px;
+    opacity: 1;
+}
+
+.p-ia__nav__user {
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    line-height: inherit;
+    text-align: initial;
+    cursor: pointer;
+    color: #ffffff;
+    box-sizing: inherit;
+    position: relative;
+    display: inline-flex;
+}
+
+.p-ia__nav__user__avatar {
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    line-height: inherit;
+    text-align: initial;
+    color: #ffffff;
+    box-sizing: inherit;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-radius 80ms cubic-bezier(.36,.19,.29,1);
+    height: 28px;
+    width: 28px;
+}
+
+.p-workspace-layout {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+    display: grid;
+    grid-template-rows: auto;
+    overflow: hidden;
+    position: relative;
+    grid-template-columns: 200px auto;
+    grid-template-areas: 'p-workspace__sidebar p-workspace__primary_view';
+}
+
+.p-workspace__sidebar--tiny {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+    grid-area: p-workspace__sidebar;
+    display: grid;
+    grid-template-columns: auto;
+    position: relative;
+    grid-template-areas: "p-workspace__channel_sidebar";
+    grid-template-rows: auto;
+    overflow: hidden;
+    width: 200px;
+}
+
+.p-workspace__channel_sidebar {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+    grid-area: p-workspace__channel_sidebar;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+}
+
+.p-ia__sidebar_header--top-nav {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    height: 64px;
+    background: #3f0e40;
+    color: #ffffff;
+}
+
+.p-ia__sidebar_header__button {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    color: #ffffff;
+    box-sizing: inherit;
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 19px 0 16px;
+    transition-property: background-color,border-color;
+    transition-duration: 80ms;
+    transition-timing-function: cubic-bezier(.36,.19,.29,1);
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    background-clip: padding-box;
+    position: relative;
+    z-index: 1;
+    flex-direction: row-reverse;
+    outline: none;
+    cursor: pointer;
+    padding-right: 54px;
+    background-color: initial;
+    border-color: rgb(82,38,83);
+}
+
+.p-ia__sidebar_header__info {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    color: #ffffff;
+    cursor: pointer;
+    box-sizing: inherit;
+    flex: 1;
+    min-width: 0;
+    order: 1;
+    border-color: rgba(0,0,0,.15);
+}
+
+.p-ia__sidebar_header__team_name {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    line-height: inherit;
+    overflow: initial;
+    padding: 0;
+    text-align: initial;
+    vertical-align: initial;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    padding-left: 4px;
+    margin-left: -4px;
+    border-color: rgba(0,0,0,.15);
+}
+
+.p-ia__sidebar_header__team_name_text {
+    -webkit-font-smoothing: antialiased;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    text-align: initial;
+    cursor: pointer;
+    box-sizing: inherit;
+    min-width: 0;
+    font-weight: 900;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    border-color: rgba(0,0,0,.15);
+}
+
+.c-icon--chevron-down {
+    -webkit-font-smoothing: antialiased;
+    color: inherit;
+    font: inherit;
+    line-height: inherit;
+    text-align: initial;
+    cursor: pointer;
+    box-sizing: inherit;
+    position: relative;
+    display: inline-flex;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 20px;
+    border-color: rgba(0,0,0,.15);
+}
+
+.p-channel_sidebar__compose_button--iap1 {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: inherit;
+    border: 0;
+    font: inherit;
+    margin: 0;
+    line-height: inherit;
+    overflow: initial;
+    padding: 0;
+    text-align: initial;
+    vertical-align: initial;
+    cursor: pointer;
+    --saf-0: rgba(var(--sk_foreground_low,29,28,29),0.13);
+    align-items: center;
+    bottom: 24px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 16px;
+    user-select: none;
+    z-index: 3;
+    border-radius: 18px;
+    top: 14px;
+    height: 36px;
+    width: 36px;
+    transition: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+    transition-property: box-shadow,transform,background-color;
+    transition-duration: 80ms;
+    transition-timing-function: cubic-bezier(.175,.875,.5,1.5);
+    background: #350d36;
+    background-color: #ffffff;
+    color: #3f0e40;
+    fill: #3f0e40;
+}
+
+.p-channel_sidebar__compose_button_svg_icon {
+    -webkit-font-smoothing: antialiased;
+    font: inherit;
+    line-height: inherit;
+    text-align: initial;
+    cursor: pointer;
+    --saf-0: rgba(var(--sk_foreground_low,29,28,29),0.13);
+    user-select: none;
+    color: #3f0e40;
+    fill: #3f0e40;
+    height: 16px;
+    box-sizing: inherit;
+}
+
+.p-channel_sidebar--show_more_feature {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+    flex: 1;
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    background: #3f0e40;
+    color: rgb(188,171,188);
+    height: auto;
+    min-height: 0;
+    width: 100%;
+}
+
+.p-channel_sidebar__list {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    box-sizing: inherit;
+    flex: 1;
+    position: relative;
+}
+
+.c-scrollbar--hidden {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    box-sizing: inherit;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    width: 200px;
+    height: 605px;
+}
+
+.c-scrollbar__hider {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    box-sizing: inherit;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -50px;
+    bottom: 0;
+    height: 100%;
+    transform: translatez(0);
+}
+
+.c-scrollbar__child {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    box-sizing: inherit;
+    width: 200px;
+}
+
+.c-virtual_list__scroll_container {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    box-sizing: inherit;
+    position: relative;
+    height: 528px;
+}
+
+.c-virtual_list__item {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    box-sizing: inherit;
+    position: absolute;
+    width: 100%;
+    top: 12px;
+}
+
+.p-channel_sidebar__link--all-threads {
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    box-sizing: inherit;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 0;
+    color: rgb(188,171,188);
+    padding: 0 16px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 16px;
+}
+
+.c-icon--inherit {
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    cursor: pointer;
+    color: rgb(188,171,188);
+    line-height: 28px;
+    box-sizing: inherit;
+    position: relative;
+    height: 20px;
+    font-family: slack v2;
+    font-style: normal;
+    font-weight: 400;
+    vertical-align: middle;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 0 -2px;
+    opacity: 1;
+    font-size: 18px;
+    width: 26px;
+}
+
+.p-channel_sidebar__static_list__item {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    box-sizing: inherit;
+    position: absolute;
+    width: 100%;
+    top: 160px;
+}
+
+.position_relative {
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    box-sizing: inherit;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    color: rgb(188,171,188);
+    padding: 0 16px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 16px;
+}
+
+.p-channel_sidebar__name {
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    user-select: none;
+    cursor: pointer;
+    line-height: 28px;
+    box-sizing: inherit;
+    margin-right: auto;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 900;
+    opacity: 1;
+    color: #ffffff;
+}
+
+.p-channel_sidebar__link--page_pactivity {
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    box-sizing: inherit;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    color: rgb(188,171,188);
+    padding: 0 16px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 16px;
+}
+
+.p-channel_sidebar__section-heading--pages-drawer {
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    box-sizing: inherit;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 0;
+    padding: 0 16px;
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    transition: color 80ms ease-out;
+    background: #3f0e40;
+}
+
+.c-icon--vertical-ellipsis {
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    color: rgb(188,171,188);
+    user-select: none;
+    cursor: pointer;
+    box-sizing: inherit;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+    margin: 0 7px 0 -3px;
+    width: 20px;
+}
+
+.p-channel_sidebar__drop_target_indicator {
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    -webkit-user-drag: element;
+    box-sizing: inherit;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 0;
+    padding: 0 16px;
+    line-height: 28px;
+    height: 36px;
+    background: #3f0e40;
+}
+
+.p-channel_sidebar__channel--show_more_feature {
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    user-select: none;
+    cursor: pointer;
+    line-height: 28px;
+    box-sizing: inherit;
+    width: 26px;
+    height: 26px;
+    margin: 0 4px 0 -6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.c-icon--caret-right {
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    user-select: none;
+    cursor: pointer;
+    line-height: 28px;
+    box-sizing: inherit;
+    width: 26px;
+    height: 26px;
+    margin: 0 4px 0 -6px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.p-channel_sidebar__section_heading_label--clickable {
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    user-select: none;
+    cursor: pointer;
+    line-height: 28px;
+    box-sizing: inherit;
+    display: block;
+    opacity: 1;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1 1 0;
+    padding-right: 8px;
+    transition: padding-right 0s ease-in-out .3s,color .1s ease-out 0s;
+    font-weight: 500;
+}
+
+.p-channel_sidebar__section_heading_label_overflow {
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    user-select: none;
+    cursor: pointer;
+    line-height: 28px;
+    text-align: left;
+    font-weight: 500;
+    box-sizing: inherit;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.p-channel_sidebar__section_heading_right {
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    user-select: none;
+    cursor: pointer;
+    line-height: 28px;
+    text-align: left;
+    font-weight: 500;
+    box-sizing: inherit;
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.p-channel_sidebar__section_heading_plus--hover-reveal {
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    box-sizing: inherit;
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    overflow: initial;
+    text-align: initial;
+    vertical-align: initial;
+    cursor: pointer;
+    margin-left: 8px;
+    line-height: 1;
+    visibility: hidden;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.p-channel_sidebar__group-description {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    color: rgb(188,171,188);
+    box-sizing: inherit;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    user-select: none;
+}
+
+.p-channel_sidebar__channel--show_more_feature p-channel_sidebar__channel--comfy {
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    font-size: 15px;
+    -webkit-user-drag: element;
+    box-sizing: inherit;
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 0;
+    color: #ffffff;
+    background: #1164a3;
+    padding: 0 16px;
+    height: 28px;
+    line-height: 28px;
+    padding-left: 10px;
+}
+
+.p-channel_sidebar__edit_mode_checkbox--not_editing {
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    cursor: pointer;
+    color: #ffffff;
+    box-sizing: inherit;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    line-height: inherit;
+    font-family: slack v2;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+    font-size: inherit;
+    transition: opacity 80ms;
+    margin-right: 4px;
+    margin-left: -24px;
+    width: 26px;
+    opacity: 0;
+}
+
+.c-icon--channel-pane-hash {
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    cursor: pointer;
+    box-sizing: inherit;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    line-height: inherit;
+    margin: 0 1px 0 -4px;
+    font-family: slack v2;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+    margin-right: 8px;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    opacity: 1;
+    color: #ffffff;
+}
+
+.c-icon--pencil {
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    cursor: pointer;
+    color: rgb(188,171,188);
+    box-sizing: inherit;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    font-family: inherit;
+    line-height: inherit;
+    width: 1em;
+    flex-shrink: 0;
+    font-size: 14px;
+    flex-basis: 28px;
+}
+
+
+/*main editor
+.p-file_drag_drop__container {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: relative;
+}
+
+.p-workspace__primary_view_body {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    box-sizing: inherit;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    flex: 1;
+    min-height: 0;
+    position: relative;
+    box-shadow: none;
+}
+
+.p-message_pane--classic-nav {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    box-sizing: inherit;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    height: auto;
+    top: -8px;
+    bottom: 0;
+    padding-left: 0;
+}
+
+.p-message_pane__top_banners {
+    font-size: 15px;
+    line-height: 1.46668;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    box-sizing: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: absolute;
+    width: auto;
+    right: auto;
+    left: 50%;
+    transform: translatex(-50%);
+    font-weight: 700;
+    text-shadow: none;
+    z-index: 201;
+    top: 14px;
+}
+.custom_scrollbar {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    box-sizing: inherit;
+    position: relative;
+    overflow: hidden;
+    width: 491px;
+    height: 551px;
+}
+.c-scrollbar__hider {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    box-sizing: inherit;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -50px;
+    bottom: 0;
+    height: 100%;
+    transform: translatez(0);
+    z-index: 200;
+    background: rgba(var(--sk_primary_background,255,255,255),1);
+}
+.c-scrollbar__child {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    box-sizing: inherit;
+    width: 491px;
+}
+.c-virtual_list__scroll_container {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    box-sizing: inherit;
+    position: relative;
+    height: 1365.4px;
+}
+.p-degraded_list__loading {
+    line-height: 1.46668;
+    font-weight: 400;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    box-sizing: inherit;
+    position: absolute;
+    width: 100%;
+    height: 96px;
+    font-size: 10pt;
+    color: rgba(var(--sk_foreground_high_solid,134,134,134),1);
+    background: rgba(var(--sk_primary_background,255,255,255),1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 0px;
+    padding-top: 40px;
+}
+.c-virtual_list__sticky_container {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    box-sizing: inherit;
+    position: absolute;
+    width: 100%;
+    padding-bottom: 24px;
+    top: 7px;
+    bottom: 802.6px;
+}
+.c-virtual_list__item--sticky {
+    font-size: 15px;
+    line-height: 1.46668;
+    font-weight: 400;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    box-sizing: inherit;
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 199;
+}
+.c-message_list__day_divider__label--jump_to_date {
+    line-height: 1.46668;
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+    font-family: slack-lato,applelogo,sans-serif;
+    --saf-0: rgba(var(--sk_foreground_low_solid,221,221,221),1);
+    box-sizing: inherit;
+    font-weight: 700;
+    color: rgba(var(--sk_primary_foreground,29,28,29),1);
+    cursor: default;
+    display: block;
+    top: 14px;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    font-size: 14px;
+    height: 9px;
+}
+.c-message_list__day_divider__label__pill {
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    box-sizing: inherit;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    overflow: initial;
+    text-align: initial;
+    vertical-align: initial;
+    cursor: pointer;
+    background: rgba(var(--sk_primary_background,255,255,255),1);
+    display: inline-block;
+    border-radius: 24px;
+    position: relative;
+    font-size: 13px;
+    height: 28px;
+    line-height: 27px;
+    padding: 0 16px;
+    z-index: 2;
+    --saf-0: rgba(var(--sk_foreground_low,29,28,29),0.13);
+    box-shadow: 0 0 0 1px var(--saf-0),0 1px 3px 0 rgba(0,0,0,.08);
+    padding-right: 8px;
+}
+.c-icon--chevron-down1 {
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    color: inherit;
+    font: inherit;
+    text-align: initial;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 27px;
+    --saf-0: rgba(var(--sk_foreground_low,29,28,29),0.13);
+    box-sizing: inherit;
+    position: relative;
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    top: 2px;
+}*/
+
+

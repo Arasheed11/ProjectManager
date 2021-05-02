@@ -1,0 +1,817 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add_WorkSpace | Project Manager</title>
+    <link href="~/Content/WorkSpaceStylesheet.css" rel="stylesheet" />
+    <style>
+        .p-get_started_landing_view {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato, appleLogo, sans-serif;
+            box-sizing: inherit;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        .p-get_started_landing_view__top_half {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            background: rgba(244,237,228,.5);
+            padding-top: 12px;
+            padding-bottom: 48px;
+        }
+
+        .p-get_started_landing_view__content_wrapper {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            margin: 0 auto;
+            max-width: 700px;
+            padding: 0 24px;
+        }
+
+        .display_flex {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            display: flex;
+        }
+
+        .flex_direction_column {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .p-get_started_landing_view__illustration--animation-ready {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            flex-shrink: 0;
+            width: 250px;
+        }
+
+        .p-get_started_landing_view {
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+            font-size: 44px;
+            line-height: 48px;
+            letter-spacing: -.25px;
+            margin-bottom: 12px;
+            padding-right: 24px;
+            font-family: Slack-Larsseit,Helvetica Neue,Helvetica,Segoe UI,Tahoma,Arial,sans-serif;
+            font-weight: 700;
+        }
+
+        .p-get_started_landing_view__title {
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+            font-size: 44px;
+            line-height: 48px;
+            letter-spacing: -.25px;
+            margin-bottom: 12px;
+            padding-right: 24px;
+            font-family: Slack-Larsseit,Helvetica Neue,Helvetica,Segoe UI,Tahoma,Arial,sans-serif;
+            font-weight: 700;
+        }
+
+        .p-get_started_landing_view__subtitle {
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            font-size: 18px;
+            line-height: 27px;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        .c-button--large {
+            -webkit-font-smoothing: antialiased;
+            box-sizing: inherit;
+            font-family: inherit;
+            user-select: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 4px;
+            align-items: center;
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+            text-decoration: none;
+            transition: all 80ms linear;
+            background: rgba(var(--sk_primary_background,255,255,255),1);
+            --saf-0: rgba(var(--sk_primary_foreground,29,28,29),0.3);
+            background-clip: padding-box;
+            font-size: 18px;
+            font-weight: 900;
+            min-width: 96px;
+            padding: 0 16px 3px;
+            height: 44px;
+            max-width: max-content;
+            margin-bottom: 16px;
+            color: #fff;
+            background-color: #611f69;
+            border: none;
+            margin-left: -190px;
+        }
+
+        .c-icon--arrow-large-right {
+            -webkit-font-smoothing: antialiased;
+            font-family: inherit;
+            user-select: none;
+            cursor: pointer;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-tap-highlight-color: transparent;
+            --saf-0: rgba(var(--sk_primary_foreground,29,28,29),0.3);
+            font-size: 18px;
+            font-weight: 900;
+            color: #fff;
+            box-sizing: inherit;
+            position: relative;
+            display: inline-flex;
+            width: 20px;
+            height: 20px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 2px;
+        }
+
+        .email_misc_field {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            margin-bottom: 10px;
+        }
+
+        .email_misc_checkbox_label {
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato, appleLogo, sans-serif;
+            box-sizing: inherit;
+            margin: initial;
+            display: flex;
+            align-items: baseline;
+            vertical-align: middle;
+            margin-bottom: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            line-height: 1.38463;
+            font-weight: 400;
+            color: rgba(var(--sk_foreground_max_solid,97,96,97),1);
+        }
+
+        .creator_signup_form__ts_and_cs {
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            font-size: 13px;
+            line-height: 1.38463;
+            font-weight: 400;
+            width: 90%;
+            color: rgba(var(--sk_foreground_max_solid,97,96,97),1);
+        }
+
+        .creator_signup_form__ts_and_cs_link {
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 13px;
+            line-height: 1.38463;
+            font-weight: 400;
+            box-sizing: inherit;
+            text-decoration: none;
+            color: rgba(var(--sk_foreground_max_solid,97,96,97),1);
+        }
+
+        .p-get_started_landing_view__illustration {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            flex-shrink: 0;
+            width: 250px;
+            display: none;
+        }
+
+        .avatar_one {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            opacity: 10;
+            animation: create-hero-illo__avatar-entrance .3s ease-out forwards;
+        }
+
+        .message_one {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            opacity: 0;
+            animation: create-hero-illo__message-entrance .3s ease-out forwards;
+            animation-delay: .1s;
+            transform-origin: 50% 20%;
+        }
+
+        .avatar_three {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            opacity: 10;
+            animation: create-hero-illo__avatar-entrance .3s ease-out forwards;
+            animation-delay: .35s;
+            transform-origin: 0 100%;
+        }
+
+        .message_two {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            opacity: 0;
+            animation: create-hero-illo__message-entrance .3s ease-out forwards;
+            animation-delay: .45s;
+            transform-origin: 40% 80%;
+        }
+
+        .avatar_two {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            opacity: 10;
+            animation: create-hero-illo__avatar-entrance .3s ease-out forwards;
+            animation-delay: .25s;
+            transform-origin: 100% 50%;
+        }
+
+        .p-get_started_landing_view__bottom_half {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            padding-top: 48px;
+            position: relative;
+            min-width: 0;
+        }
+
+        .p-get_started_creator_landing__workspaces_or_divider_container {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato, appleLogo, sans-serif;
+            box-sizing: inherit;
+            position: absolute;
+            top: -35px;
+            left: calc(50% - 35px);
+        }
+
+        .p-get_started_creator_landing__workspaces_or_divider {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            background-color: #fff;
+            border-radius: 100%;
+            color: rgba(var(--sk_foreground_max,29,28,29),.7);
+            font-weight: 700;
+            height: 70px;
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .large_top_margin {
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            align-items: center;
+            background: #f8f8f8;
+            border-radius: 12px;
+            display: flex;
+            font-size: 15px;
+            line-height: 22px;
+            min-width: 0;
+            padding: 24px;
+            margin-top: 24px;
+        }
+
+        .text {
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            line-height: 22px;
+            box-sizing: inherit;
+            flex-grow: 1;
+        }
+
+        .c-icon--search {
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            font-size: 15px;
+            line-height: 22px;
+            box-sizing: inherit;
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 15px;
+            height: 15px;
+            margin-right: 4px;
+        }
+
+        .p-confirmed_email_pill {
+            font-weight: initial;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            text-align: center;
+            box-sizing: inherit;
+            height: 32px;
+            display: flex;
+            background: rgba(var(--sk_foreground_min,29,28,29),.04);
+            border-radius: 50px;
+            font-size: 13px;
+            line-height: 32px;
+            color: rgba(var(--sk_foreground_max_solid,97,96,97),1);
+            padding-left: 16px;
+            padding-right: 16px;
+            max-width: 330px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: pre;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .email {
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            text-align: center;
+            font-size: 13px;
+            line-height: 32px;
+            box-sizing: inherit;
+            margin-left: 1.6px;
+            margin-right: 4px;
+            color: rgba(var(--sk_foreground_max,29,28,29),.7);
+            font-weight: 700;
+            max-width: 150px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: pre;
+        }
+
+        .p-confirmed_email_pill__change_email {
+            font-weight: initial;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            text-align: center;
+            font-size: 13px;
+            line-height: 32px;
+            white-space: pre;
+            box-sizing: inherit;
+            text-decoration: none;
+            color: rgba(var(--sk_foreground_max_solid,97,96,97),1);
+        }
+
+        .right-col {
+            font-size: 15px;
+            line-height: 1.46668;
+            font-weight: initial;
+            color: #1d1c1d;
+            font-variant-ligatures: common-ligatures;
+            -webkit-font-smoothing: antialiased;
+            font-family: Slack-Lato,appleLogo,sans-serif;
+            box-sizing: inherit;
+            display: flex;
+            justify-content: flex-end;
+            grid-column: span 3;
+            text-align: center;
+            margin-top: 16px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="get_started_app_root" data-qa="page_contents" class="get-started-app-root" data-reactroot="">
+        <header class="p-refreshed_page__header p-refreshed_page__header--should_wrap p-refreshed_page__header--is_horchata_landing_bg">
+            <div class="left-col">
+            </div>
+            <div class="center-col">
+                @*<a target="_self" class="c-link" href="https://slack.com" rel="noopener noreferrer">
+                    <img alt="Slack" src="https://a.slack-edge.com/bv1-9/slack_logo-ebd02d1.svg" height="34" title="Slack">
+                </a>*@
+            </div>
+            <div class="right-col">
+                <div class="p-confirmed_email_pill">
+
+                    <span class="email">Confirmed as ahsanrasheed@lewisu.edu</span>
+                    <a target="_self" class="p-confirmed_email_pill__change_email" href="/get-started#/createnew" rel="noopener noreferrer">Change</a>
+                </div>
+            </div>
+        </header>
+        <div class="p-get_started_landing_view">
+            <div class="p-get_started_landing_view__top_half">
+                <div class="p-get_started_landing_view__content_wrapper">
+                    <div class="display_flex">
+                        <div class="display_flex flex_direction_column">
+                            <h2 data-qa="landing-title" class="p-get_started_landing_view__title">Create a new Project</h2>
+                            <div data-qa="landing-subtitle" class="p-get_started_landing_view__subtitle">
+                                Project gives your team a home — a place where they can talk and work together. To create a new Project, click the button below.
+                            </div>
+                            <button id="AddWorkspace" class="c-button c-button--outline c-button--large p-get_started_landing_view__button" type="button">
+                                
+                                Create a Project<i class="c-icon arrow-right c-icon--arrow-large-right" type="arrow-large-right" aria-hidden="true"></i>
+                            </button>
+                            <div class="email_misc_field p-get_started_creator_landing__email_misc_field">
+                                <label id="email_misc_checkbox_label" for="email_misc_checkbox" class="c-label email_misc_label normal tractor_checkbox_label c-label--inline c-label--pointer" data-qa-label="true" data-qa-label-type="inline">
+                                    <input id="email_misc_checkbox" data-qa="email-misc-checkbox" type="checkbox" class="c-input_checkbox" checked="">
+                                    <span class="c-label__text" data-qa-label-text="true">It’s okay to send me emails about Projects.</span><span data-qa-label-children="true">
+                                    </span>
+                                </label>
+                            </div>
+                            <div class="creator_signup_form__ts_and_cs p-get_started_creator_landing__ts_and_cs">
+                                By continuing, you’re agreeing to our
+                                <a target="_blank" class="c-link creator_signup_form__ts_and_cs_link" href="/terms-of-service" rel="noopener noreferrer">Customer Terms of Service</a>
+                                ,
+                                <a target="_blank" class="c-link creator_signup_form__ts_and_cs_link" href="/privacy-policy" rel="noopener noreferrer">Privacy Policy</a>
+                                ,and
+                                <a target="_blank" class="c-link creator_signup_form__ts_and_cs_link" href="/cookie-policy" rel="noopener noreferrer">Cookie Policy</a>.
+                            </div>
+                        </div>
+                        <div class="p-get_started_landing_view__illustration--animation-ready">
+                            <svg data-ui="illustration" viewBox="0 0 250 315" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <title>
+                                    Three teammates work together, sharing files, signing off on docs, and sending messages back and forth.
+                                </title>
+                                <g class="avatar_one">
+                                    <path d="M80.576 106.963H34.9124V61.381C34.9124 36.2176 55.3674 15.7993 80.576 15.7993C105.785 15.7993 126.24 36.2176 126.24 61.381C126.24 86.5445 105.785 106.963 80.576 106.963Z" fill="#F2606A">
+                                    </path>
+                                    <path d="M128.688 135.434H111.114L96.2773 89.9956H127.824L143.382 135.434H128.688Z" fill="white">
+                                    </path>
+                                    <path d="M102.327 77.7725L119.901 86.8313C120.621 87.2627 121.198 87.9816 121.486 88.7006L124.079 96.8966L122.782 97.0404C121.486 97.328 120.189 96.6091 119.757 95.3149L116.732 89.9947H110.106H99.4462L96.5652 88.7006L102.327 77.7725Z" fill="#FDD4BE">
+                                    </path>
+                                    <path d="M70.2043 59.5122L109.962 80.3619L102.615 89.9959H96.8535C94.9808 89.9959 93.2523 89.5645 91.5237 88.8455L76.6866 81.9436L73.3734 62.5318L70.2043 59.5122Z" fill="#1E328F">
+                                    </path>
+                                    <path d="M134.738 125.943H111.114C110.826 125.943 110.538 125.655 110.538 125.368C110.538 125.08 110.826 124.792 111.114 124.792H134.738C135.026 124.792 135.315 125.08 135.315 125.368C135.315 125.655 135.171 125.943 134.738 125.943Z" fill="#FDD4BE">
+                                    </path>
+                                    <path d="M133.586 121.198H109.962C109.674 121.198 109.386 120.911 109.386 120.623C109.386 120.335 109.674 120.048 109.962 120.048H133.586C133.874 120.048 134.162 120.335 134.162 120.623C134.162 120.911 133.874 121.198 133.586 121.198Z" fill="#FDD4BE">
+                                    </path>
+                                    <path d="M126.096 116.597H108.666C108.378 116.597 108.09 116.309 108.09 116.021C108.09 115.734 108.378 115.446 108.666 115.446H126.096C126.384 115.446 126.672 115.734 126.672 116.021C126.672 116.309 126.384 116.597 126.096 116.597Z" fill="#FDD4BE">
+                                    </path>
+                                    <path d="M130.993 111.851H107.369C107.081 111.851 106.793 111.563 106.793 111.276C106.793 110.988 107.081 110.701 107.369 110.701H130.993C131.281 110.701 131.569 110.988 131.569 111.276C131.569 111.563 131.281 111.851 130.993 111.851Z" fill="#FDD4BE">
+                                    </path>
+                                    <path d="M126.239 107.249H106.073C105.784 107.249 105.496 106.962 105.496 106.674C105.496 106.387 105.784 106.099 106.073 106.099H126.239C126.528 106.099 126.816 106.387 126.816 106.674C126.816 106.962 126.528 107.249 126.239 107.249Z" fill="#FDD4BE">
+                                    </path>
+                                    <path d="M125.52 102.505H104.776C104.488 102.505 104.2 102.217 104.2 101.93C104.2 101.642 104.488 101.354 104.776 101.354H125.52C125.808 101.354 126.096 101.642 126.096 101.93C126.096 102.217 125.808 102.505 125.52 102.505Z" fill="#FDD4BE">
+                                    </path>
+                                    <path d="M118.461 97.9042H103.48C103.192 97.9042 102.904 97.6167 102.904 97.3291C102.904 97.0415 103.192 96.7539 103.48 96.7539H118.461C118.749 96.7539 119.037 97.0415 119.037 97.3291C119.037 97.6167 118.749 97.9042 118.461 97.9042Z" fill="#FDD4BE">
+                                    </path>
+                                    <path d="M100.311 102.505L98.1501 95.7469H96.9977C94.4048 95.7469 92.1 93.8776 91.6678 91.2894L85.7618 56.7796C85.1856 53.76 83.457 51.1717 80.8641 49.59L71.789 43.8384L67.4675 45.5639C64.8746 46.5704 62.1377 46.7142 59.5448 45.8515L57.6722 45.2763C55.7995 44.7011 54.6471 42.6881 55.0793 40.8188C55.2233 40.3874 55.3674 39.956 55.6555 39.6685L42.691 42.1129C41.2505 42.4005 39.666 42.8319 38.3695 43.5508C36.3528 48.4397 35.2005 53.76 34.9124 59.5116V91.577L46.2923 106.819H80.576C87.6345 106.963 94.4048 105.381 100.311 102.505Z" fill="#1E328F">
+                                    </path>
+                                    <path d="M57.8162 45.2767L59.6888 45.8519C62.2817 46.7146 65.0186 46.5708 67.6115 45.5643L71.933 43.8388L72.6533 40.3878L76.1105 41.1068C79.4236 41.8257 82.5927 39.6689 83.1689 36.3617L83.8891 32.1917L87.3463 31.6166C87.6344 31.6166 87.9225 31.329 87.7785 31.0414L85.9058 20.5447L86.6261 16.0872L80.1438 15.9434C78.4152 15.9434 76.9747 16.8061 76.1105 18.244L72.7973 25.2898C72.3652 26.2963 71.0687 26.8715 69.9163 26.5839C68.6199 26.1525 68.0437 24.8584 68.3318 23.5643L68.6199 22.414C68.908 21.1198 68.0437 19.5381 66.7472 19.2506C65.4508 18.963 64.1543 19.6819 63.7222 20.8323L63.2901 21.9826C62.7139 23.4205 62.4258 25.0022 62.2817 26.5839C62.1377 29.3159 60.4091 31.6166 57.8162 32.3355L56.9519 32.6231L55.7995 39.2375C55.5114 39.5251 55.3673 39.9564 55.2233 40.3878C54.7911 42.6885 55.9435 44.7015 57.8162 45.2767Z" fill="#F3DFCC">
+                                    </path>
+                                    <path opacity="0.3" d="M72.6532 40.5312L69.052 39.6685L72.3651 41.9691L72.6532 40.5312Z" fill="#72594B">
+                                    </path>
+                                    <path d="M66.7473 1.27614C73.5177 0.269602 78.4153 2.13888 81.7285 4.87091C85.6178 4.29575 89.075 7.02777 89.6512 10.7663C90.2274 14.6487 87.4905 18.0997 83.7452 18.6748C81.4404 18.9624 79.2796 18.2435 77.8391 16.8056C77.1189 17.2369 76.5427 17.8121 76.1105 18.531L72.7974 25.5768C72.3653 26.4395 71.501 27.0147 70.4926 27.0147C68.9081 27.0147 67.8997 25.5768 68.1878 24.1389L68.4759 22.701C68.764 21.1193 67.6116 19.5376 65.883 19.5376C64.8747 19.5376 64.0104 20.2565 63.5782 21.1193L62.7139 25.0016L62.2818 27.0147C62.1378 29.7467 60.4092 32.0474 57.8163 32.7663L56.952 33.0539L55.7996 31.9036C53.7829 29.8905 52.4864 27.1585 52.4864 24.2827C52.3424 16.9493 53.9269 3.14542 66.7473 1.27614Z" fill="black">
+                                    </path>
+                                    <path d="M34.9124 106.963V61.3809L55.3674 68.139C61.9936 70.2959 67.1794 75.3286 69.7723 81.6554L74.67 106.819L34.9124 106.963Z" fill="#78D7DD">
+                                    </path>
+                                </g>
+                                <g class="message_one">
+                                    <path d="M217.539 79.0137H158.247C150.708 79.0137 144.619 73.0225 144.619 65.605C144.619 58.1874 150.708 52.1963 158.247 52.1963H217.539C225.078 52.1963 231.166 58.1874 231.166 65.605C231.166 73.0225 225.078 79.0137 217.539 79.0137Z" fill="white">
+                                    </path>
+                                    <path d="M219.114 63.1405H175.404C174.033 63.1405 172.879 62.026 172.879 60.7026C172.879 59.3791 174.033 58.2646 175.404 58.2646H219.114C220.484 58.2646 221.638 59.3791 221.638 60.7026C221.638 62.026 220.484 63.1405 219.114 63.1405Z" fill="#E6E6E6">
+                                    </path>
+                                    <path d="M204.501 72.4364H175.389C174.027 72.4364 172.879 71.3219 172.879 69.9985C172.879 68.675 174.027 67.5605 175.389 67.5605H204.501C205.863 67.5605 207.011 68.675 207.011 69.9985C207.011 71.3916 205.863 72.4364 204.501 72.4364Z" fill="#E6E6E6">
+                                    </path>
+                                    <path d="M156.647 74.1298C156.215 74.1294 155.824 74.0262 155.475 73.8203C155.133 73.622 154.861 73.3438 154.66 72.9857C154.467 72.6352 154.371 72.2391 154.371 71.7975L154.383 58.1816C154.384 57.7399 154.481 57.344 154.675 56.9939C154.876 56.6362 155.148 56.3585 155.491 56.1608C155.841 55.9556 156.232 55.8531 156.663 55.8535L162.112 55.8586C162.931 55.8594 163.62 56.157 164.177 56.7515L166.966 59.6783C167.509 60.2576 167.78 60.9432 167.78 61.7352L167.771 71.81C167.77 72.2517 167.67 72.6476 167.468 72.9977C167.274 73.3554 167.002 73.6331 166.652 73.8308C166.31 74.036 165.923 74.1385 165.491 74.1381L156.647 74.1298ZM165.492 72.9958C165.842 72.9961 166.121 72.8898 166.33 72.6768C166.546 72.4561 166.654 72.1668 166.654 71.8089L166.663 61.7341C166.664 61.2391 166.496 60.8163 166.162 60.4657L163.373 57.5389C163.031 57.1807 162.61 57.0013 162.111 57.0009L156.662 56.9958C156.312 56.9955 156.029 57.1056 155.813 57.3263C155.605 57.5393 155.5 57.8248 155.5 58.1827L155.488 71.7985C155.487 72.1564 155.591 72.4459 155.8 72.6669C156.015 72.8803 156.298 72.9872 156.648 72.9876L165.492 72.9958ZM158.594 69.8367C158.37 69.8365 158.177 69.7487 158.013 69.5734C157.85 69.3981 157.768 69.2039 157.768 68.9907C157.768 68.7241 157.899 68.4691 158.16 68.2257C158.42 67.9746 158.819 67.7237 159.355 67.4729C159.736 66.6813 160.034 65.8858 160.251 65.0864C160.005 64.614 159.883 64.2065 159.883 63.8638C159.883 63.5668 159.951 63.3385 160.085 63.1787C160.219 63.0113 160.413 62.9277 160.666 62.9279C161.135 62.9283 161.369 63.2598 161.368 63.9223C161.368 64.2193 161.323 64.581 161.233 65.0074C161.538 65.6016 161.899 66.1236 162.315 66.5733L162.617 66.5393C162.669 66.5317 162.732 66.5242 162.806 66.5166C162.881 66.5091 162.963 66.5054 163.052 66.5054C163.387 66.5058 163.64 66.5859 163.811 66.746C163.99 66.8985 164.079 67.0851 164.079 67.306C164.079 67.5192 163.989 67.7171 163.81 67.8997C163.631 68.0747 163.401 68.1621 163.118 68.1618C162.775 68.1615 162.396 67.9784 161.979 67.6124C161.451 67.7186 160.81 67.9198 160.058 68.216C159.819 68.7032 159.585 69.0952 159.353 69.3919C159.13 69.6887 158.877 69.837 158.594 69.8367ZM160.628 67.1543C161.045 67.0176 161.336 66.9303 161.5 66.8924C161.321 66.6714 161.087 66.3513 160.797 65.9322C160.73 66.1834 160.618 66.5184 160.461 66.9371L160.338 67.2568L160.628 67.1543Z" fill="#D72B3F"></path>
+                                </g>
+                                <g class="avatar_three">
+                                    <path d="M8.99979 302.173H55.3207C80.9021 302.173 101.642 281.456 101.642 255.902C101.642 230.349 80.9021 209.631 55.3207 209.631C29.7393 209.631 8.99979 230.349 8.99979 255.902V302.173Z" fill="#FAA11B"></path>
+                                    <path d="M39.3424 267.915C39.7459 267.915 40.1494 267.915 40.5529 267.915H66.9413C67.3448 267.915 67.7482 267.915 68.1517 267.915C78.8846 268.398 87.6808 275.734 90.9087 285.407C82.4354 295.645 69.6043 302.094 55.24 302.094H15.0522V293.63C15.1329 280.087 25.7044 268.559 39.3424 267.915Z" fill="#7ECFD7"></path>
+                                    <path d="M18.8455 239.377C18.8455 240.425 20.1367 241.393 20.2174 242.36C20.2981 243.408 19.0876 244.537 19.1683 245.504C19.249 246.552 20.7016 247.358 20.863 248.325C21.0244 249.373 20.056 250.582 20.2981 251.55C20.5402 252.517 22.0735 253.081 22.477 254.049C22.8805 255.016 22.1542 256.467 22.5577 257.354C23.0419 258.241 24.6558 258.402 25.2207 259.288C25.7856 260.095 25.4628 261.707 26.1891 262.432C26.8347 263.158 28.4487 262.916 29.2556 263.561C29.9819 264.206 30.0626 265.818 30.9503 266.382C31.7573 266.866 33.2906 266.302 34.1782 266.705C35.0659 267.108 35.4694 268.72 36.4378 269.042C37.3255 269.365 38.6974 268.478 39.6657 268.72C40.6341 268.962 41.2797 270.413 42.3288 270.655C43.2972 270.816 44.5076 269.768 45.5567 269.929C46.5251 270.09 47.4128 271.461 48.4619 271.541C49.4302 271.622 50.56 270.413 51.5284 270.493C52.4968 270.493 53.4652 271.783 54.5143 271.783C55.5633 271.783 56.5317 270.493 57.5001 270.413C58.5492 270.332 59.5983 271.541 60.5666 271.461C61.6157 271.38 62.4227 270.01 63.3911 269.849C64.4402 269.687 65.6506 270.735 66.5383 270.574C67.5067 270.332 68.233 268.881 69.1207 268.639C70.0891 268.317 71.4609 269.204 72.3486 268.881C73.317 268.478 73.7205 266.947 74.6082 266.463C75.4959 265.979 77.0291 266.624 77.8361 266.06C78.7238 265.496 78.7238 263.883 79.5308 263.238C80.3378 262.594 81.871 262.835 82.5973 262.11C83.3236 261.384 82.9201 259.772 83.5657 258.966C84.1306 258.16 85.7446 257.999 86.2287 257.112C86.7129 256.225 85.9867 254.774 86.3901 253.888C86.7936 253.001 88.3269 252.437 88.569 251.469C88.8918 250.502 87.8427 249.212 88.0848 248.245C88.3269 247.277 89.6988 246.552 89.8602 245.504C90.0216 244.537 88.8111 243.408 88.8918 242.36C88.9725 241.393 90.2637 240.425 90.2637 239.377C90.2637 238.329 88.9725 237.362 88.8918 236.314C88.8111 235.266 89.9409 234.057 89.6988 233.009C89.5374 231.961 88.0848 231.236 87.762 230.188C87.5199 229.14 88.4076 227.769 88.0041 226.802C87.6813 225.835 86.0673 225.27 85.6639 224.303C85.2604 223.336 85.906 221.804 85.4218 220.917C84.9376 220.031 83.3236 219.708 82.7587 218.821C82.1938 217.935 82.5973 216.323 81.9517 215.516C81.3061 214.71 79.6922 214.71 78.9659 213.904C78.2396 213.098 78.401 211.486 77.6747 210.76C76.9484 210.035 75.2538 210.277 74.4468 209.632C73.6398 208.987 73.5591 207.294 72.6714 206.73C71.7837 206.165 70.2505 206.649 69.2821 206.165C68.3944 205.682 67.9909 204.07 67.0225 203.667C66.0541 203.263 64.6016 204.07 63.6332 203.747C62.6648 203.425 61.9385 201.974 60.8894 201.732C59.8404 201.49 58.6299 202.619 57.5808 202.457C56.5317 202.377 55.5633 201.006 54.5143 201.006C53.4652 201.006 52.4968 202.296 51.4477 202.457C50.3986 202.538 49.1882 201.49 48.1391 201.732C47.09 201.974 46.4444 203.425 45.3953 203.747C44.4269 204.07 42.9744 203.263 42.006 203.667C41.0376 204.07 40.6341 205.682 39.7464 206.165C38.8588 206.649 37.2448 206.165 36.3571 206.73C35.4694 207.294 35.3887 208.987 34.5817 209.632C33.7747 210.277 32.1608 210.035 31.3538 210.76C30.6275 211.486 30.7889 213.098 30.0626 213.904C29.3363 214.71 27.7224 214.71 27.0768 215.516C26.4312 216.323 26.8347 217.935 26.2698 218.821C25.7049 219.708 24.0909 219.95 23.6067 220.917C23.1226 221.804 23.7681 223.336 23.3646 224.303C22.9612 225.27 21.3472 225.754 21.0244 226.802C20.7016 227.769 21.5893 229.14 21.2665 230.188C21.0244 231.236 19.5718 231.961 19.3297 233.009C19.1683 234.057 20.2981 235.266 20.1367 236.314C20.1367 237.362 18.8455 238.329 18.8455 239.377Z" fill="black"></path>
+                                    <path d="M53.4645 275.976C58.1451 275.976 61.8572 272.187 61.8572 267.592V256.79H44.9912V267.592C45.0719 272.187 48.8647 275.976 53.4645 275.976Z" fill="#723C19"></path>
+                                    <path d="M69.4428 245.344V236.718H71.541C72.9128 236.718 73.9619 237.847 73.9619 239.137V240.749C73.9619 243.328 71.9445 245.344 69.4428 245.344Z" fill="#723C19"></path>
+                                    <path opacity="0.3" d="M61.9376 261.949C59.5167 263.723 56.6115 267.108 53.545 267.108C50.4784 267.108 47.4926 263.642 45.1523 261.949V256.79H62.0183V261.949H61.9376Z" fill="black"></path>
+                                    <path d="M71.6214 253.647C68.6799 253.647 66.2953 251.265 66.2953 248.327C66.2953 245.388 68.6799 243.006 71.6214 243.006C74.5629 243.006 76.9475 245.388 76.9475 248.327C76.9475 251.265 74.5629 253.647 71.6214 253.647Z" stroke="#FAA11B" stroke-width="0.833764" stroke-miterlimit="10"></path>
+                                    <path d="M37.5664 245.344V236.718H35.4682C34.0964 236.718 33.0473 237.847 33.0473 239.137V240.749C33.0473 243.328 35.0648 245.344 37.5664 245.344Z" fill="#723C19"></path>
+                                    <path d="M35.388 253.647C32.4465 253.647 30.0619 251.265 30.0619 248.327C30.0619 245.388 32.4465 243.006 35.388 243.006C38.3295 243.006 40.7141 245.388 40.7141 248.327C40.7141 251.265 38.3295 253.647 35.388 253.647Z" stroke="#FAA11B" stroke-width="0.833764" stroke-miterlimit="10">
+                                    </path>
+                                    <path d="M53.4648 264.609C59.1137 264.609 64.1977 261.304 66.4573 256.225C68.1519 252.356 69.2817 248.245 69.6045 244.053L70.4922 232.687C70.4922 223.255 62.8258 215.678 53.4648 215.678C44.0231 215.678 36.4374 223.336 36.4374 232.687L37.4058 244.053C37.7286 248.245 38.7777 252.356 40.5531 256.225C42.8126 261.304 47.8966 264.609 53.4648 264.609Z" fill="#723C19"></path>
+                                    <path d="M53.4648 221.643C45.0722 221.643 38.0514 227.769 36.6795 235.75L36.4374 232.687C36.4374 223.255 44.1038 215.678 53.4648 215.678C62.9065 215.678 70.4922 223.336 70.4922 232.687L70.2501 235.75C68.8782 227.769 61.9382 221.643 53.4648 221.643Z" fill="#F1606A"></path>
+                                    <path opacity="0.3" d="M53.303 234.703L51.7697 242.361C51.6083 243.087 52.1732 243.812 52.8995 243.812H55.0784" stroke="black" stroke-width="0.671175" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round">
+                                    </path>
+                                    <path opacity="0.3" d="M57.0957 249.777C57.0957 249.777 55.8045 250.341 53.0608 250.341C50.317 250.341 49.0259 249.777 49.0259 249.777" stroke="black" stroke-width="0.671175" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </g>
+                                <g class="message_two">
+                                    <path d="M184.7 284.345H127.072C119.801 284.345 113.832 278.3 113.832 270.937C113.832 263.573 119.801 257.528 127.072 257.528H184.7C191.972 257.528 197.941 263.573 197.941 270.937C197.941 278.3 191.972 284.345 184.7 284.345Z" fill="white">
+                                    </path>
+                                    <path d="M183.359 269.717H128.406C127.105 269.717 126.021 268.609 126.021 267.279C126.021 265.949 127.105 264.841 128.406 264.841H183.359C184.66 264.841 185.744 265.949 185.744 267.279C185.852 268.609 184.768 269.717 183.359 269.717Z" fill="#E6E6E6"></path>
+                                    <path d="M156.476 278.25H128.372C127.09 278.25 126.021 277.142 126.021 275.812C126.021 274.482 127.09 273.374 128.372 273.374H156.583C157.865 273.374 158.934 274.482 158.934 275.812C158.934 277.142 157.865 278.25 156.476 278.25Z" fill="#E6E6E6">
+                                    </path>
+                                    <g class="message_two_reactions">
+                                        <path d="M178.08 302.63H190.984C194.799 302.63 197.941 299.327 197.941 295.316C197.941 291.305 194.799 288.002 190.984 288.002H178.08C174.265 288.002 171.123 291.305 171.123 295.316C171.123 299.445 174.265 302.63 178.08 302.63Z" fill="white">
+                                        </path>
+                                        <path d="M189.86 295.963C190.012 295.91 190.189 295.874 190.367 295.874C190.936 295.874 191.541 296.194 191.541 296.95C191.541 297.528 191.114 298.017 190.323 298.017C189.629 298.017 189.078 297.537 189.042 296.772L188.189 296.968C188.242 297.91 188.998 298.782 190.332 298.782C191.674 298.782 192.421 297.901 192.421 296.932C192.421 295.75 191.488 295.181 190.643 295.181L192.288 293.66V292.878H188.376V293.678H191.132L189.434 295.243L189.86 295.963Z" fill="#1D1C1D">
+                                        </path>
+                                        <rect id="Rounded Rectangle" x="175.999" y="290.439" width="9.75177" height="9.75177" rx="1.21897" fill="#14A23C">
+                                        </rect>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M180.473 297.77L183.464 293.795L183.467 293.79C183.516 293.722 183.552 293.647 183.577 293.57C183.602 293.493 183.617 293.412 183.617 293.329C183.617 293.223 183.597 293.12 183.556 293.022C183.515 292.924 183.456 292.834 183.375 292.761C183.312 292.702 183.24 292.657 183.16 292.625C183.084 292.593 183 292.573 182.911 292.573C182.801 292.573 182.696 292.601 182.601 292.653C182.51 292.702 182.431 292.769 182.368 292.852L179.973 296.033L179.415 295.15L179.409 295.142C179.346 295.048 179.265 294.969 179.166 294.911C179.066 294.851 178.954 294.818 178.835 294.818C178.675 294.818 178.53 294.874 178.409 294.975L178.408 294.977C178.321 295.051 178.254 295.141 178.206 295.243C178.157 295.346 178.132 295.456 178.132 295.57C178.132 295.721 178.173 295.865 178.257 295.993L179.338 297.729L179.34 297.732C179.403 297.83 179.485 297.911 179.587 297.971L179.595 297.975C179.696 298.03 179.806 298.059 179.922 298.059C180.033 298.059 180.139 298.031 180.235 297.979L180.24 297.977C180.332 297.925 180.411 297.856 180.473 297.77ZM183.169 292.985L183.374 292.76L183.375 292.761L183.376 292.762L183.169 292.985Z" fill="white"></path>
+                                    </g>
+                                </g>
+                                <g class="avatar_two">
+                                    <path d="M249 238.898H187.668C153.773 238.898 126.335 211.509 126.335 177.676C126.335 143.843 153.773 116.454 187.668 116.454C221.562 116.454 249 143.843 249 177.676V238.898Z" fill="#779846">
+                                    </path>
+                                    <path d="M155.28 210.865L143.229 183.906L173.357 175.743L185.193 205.172L173.357 226.976L162.92 224.935L155.28 210.865Z" fill="white">
+                                    </path>
+                                    <path d="M149.039 123.758L160.66 115.81L204.023 155.121L189.389 174.455L149.039 123.758Z" fill="#F6BBC1">
+                                    </path>
+                                    <path d="M136.557 108.613L136.342 107.647C136.019 106.465 136.234 105.284 136.772 104.21L137.633 102.813C138.171 101.847 139.032 101.202 140.108 100.987C140.646 100.88 141.184 100.773 141.722 100.88L145.273 100.987C146.349 100.987 147.317 101.632 147.855 102.491L136.557 108.613Z" fill="#9B7761"></path>
+                                    <path d="M135.481 114.413L157.432 102.276L154.849 98.5171L133.652 110.225L129.886 115.165L135.481 114.413Z" fill="black">
+                                    </path>
+                                    <path d="M151.083 105.82L159.154 116.883L150.653 122.683L144.95 119.89C144.412 119.568 143.874 119.246 143.336 118.816L135.804 111.942C135.051 111.19 134.943 110.009 135.697 109.149C136.235 108.505 137.095 108.29 137.849 108.612L142.475 110.438L151.083 105.82Z" fill="#9B7761">
+                                    </path>
+                                    <path d="M185.408 123.542L184.547 131.92L181.212 137.828C180.996 138.257 181.104 138.794 181.427 139.117L183.579 140.835V141.05C183.364 143.52 183.902 145.991 185.085 148.031L186.914 151.146C187.668 152.328 188.851 153.08 190.25 153.08H192.617L191.972 157.161H212.416V126.55L185.408 123.542Z" fill="#9B7761"></path>
+                                    <path d="M160.445 214.517L160.122 205.173C160.122 204.206 159.261 203.454 158.4 203.454C157.539 203.454 156.786 204.099 156.679 205.065L156.033 210.865C156.033 211.295 155.495 211.295 155.28 210.973L149.577 198.084L148.824 198.836C148.178 199.48 147.855 200.34 147.855 201.199L147.64 210.436C147.64 212.369 148.178 214.195 149.254 215.806L161.843 233.206C163.78 234.173 165.825 234.925 167.977 235.677L173.249 227.084L162.381 218.491C161.198 217.525 160.552 216.021 160.445 214.517Z" fill="#9B7761"></path>
+                                    <path d="M228.125 172.092C226.942 169.729 224.467 168.225 221.777 168.225H191.434C183.471 168.225 177.015 174.67 177.015 182.618V219.888L166.255 235.033C172.926 237.503 180.136 238.899 187.56 238.899H226.081V226.01L234.259 194.97C235.442 190.351 234.904 185.41 232.752 181.221L228.125 172.092Z" fill="#F6BBC1">
+                                    </path>
+                                    <path d="M203.269 112.05C195.63 112.05 188.959 116.239 185.623 122.469C185.3 123.113 185.3 123.758 185.623 124.402L190.68 132.887C191.218 133.747 192.187 134.176 193.155 134.069C194.769 133.747 196.383 134.821 196.813 136.324L196.921 136.754C197.351 138.15 196.813 139.547 195.63 140.298C194.984 140.728 194.554 141.265 194.231 142.017C194.016 142.554 193.908 143.198 194.016 143.843L189.927 171.339C189.066 177.354 193.693 182.832 199.826 182.832H213.061C218.656 182.832 223.068 178.321 223.068 172.843V131.491C223.176 120.75 214.245 112.05 203.269 112.05Z" fill="black">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-get_started_landing_view__bottom_half">
+                <div class="p-get_started_landing_view__content_wrapper">
+                    <div class="p-get_started_creator_landing__workspaces">
+                        <div class="p-get_started_creator_landing__workspaces_or_divider_container">
+                            <div class="p-get_started_creator_landing__workspaces_or_divider">
+                                OR
+                            </div>
+                        </div>
+                        <h3 class="p-get_started_creator_landing__workspaces_title" style="text-align:center;">Open a workspace</h3>
+                        <div class="p-your_workspaces">
+                            <section data-qa="current_workspaces_list" class="p-workspaces_list">
+                                <div class="p-workspaces_list__panel">
+                                    <div class="p-workspaces_list__panel_subtitle">
+                                        <h4>Workspaces for <strong>ahsanrasheed@lewisu.edu</strong></h4>
+                                    </div><div class="p-expanding_workspace_list">
+                                        <div class="p-expanding_workspace_list__header">
+                                        </div>
+                                        <div class="p-expanding_workspace_list__workspaces p-expanding_workspace_list__workspaces--no_toggle">
+                                            <a target="_blank" class="c-link p-workspaces_list__link" data-qa="current_workspaces_open_link" href="https://camsatlewisu.slack.com/ssb/redirect?entry_point=your_workspaces" rel="noopener noreferrer">
+                                                <div class="p-workspace_info">
+                                                    <i class="c-team_icon p-workspace_info__icon" role="img" aria-label="Lewis University CaMS" style="height: 44px; width: 44px; min-width: 44px; font-size: 24px; line-height: 44px; white-space: nowrap; background-image: url(&quot;https://avatars.slack-edge.com/2017-07-10/211268366566_d28f748e2172652f1db9_88.png&quot;);">
+                                                    </i>
+                                                    <div class="p-workspace_info__content">
+                                                        <div class="p-workspace_info__title" style="text-align:left;">
+                                                            Lewis University CaMS
+                                                        </div>
+                                                        <div class="p-workspace_info__members">
+                                                            <div class="avatar_stack">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/557a8108b0fbc48b3bc493f8117fdc2b.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" alt="User Avatar">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/f065a1bc194de9071734548a1628e686.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0022-48.png" alt="User Avatar">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/74b8293e9120b3194a20eaec6a0743e3.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0011-48.png" alt="User Avatar">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/c0e31c08b84e751852b1dc5b46c8dec3.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0010-48.png" alt="User Avatar">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/b459fa5c0218d58b02b9d09bfbf14021.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0018-48.png" alt="User Avatar">
+                                                            </div>
+                                                            <div class="count">
+                                                                740 members
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="p-workspace_info__action">
+                                                        <span class="p-workspaces_list__link_icon_text">Open</span>
+                                                        <i class="c-icon c-icon--arrow-right-medium" type="arrow-right-medium" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <span aria-label="(opens in new tab)"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section data-qa="invited_workspaces_list" class="p-workspaces_list__invitations p-workspaces_list">
+                                <h3 style="text-align:center;">Accept an invitation</h3>
+                                <div class="p-workspaces_list__panel">
+                                    <div class="p-workspaces_list__panel_subtitle">
+                                        <h4>Invitations for <strong>ahsanrasheed@lewisu.edu</strong></h4>
+                                    </div>
+                                    <div class="p-workspaces_list__joins p-workspaces_list__invitations_panel--padded">
+                                        <div class="p-expanding_workspace_list">
+                                            <div class="p-expanding_workspace_list__header">
+                                                <div class="p-workspaces_list__join_details">
+                                                    <i class="c-icon c-icon--envelope-o" type="envelope-o" aria-hidden="true"></i>
+                                                    <span class="invited_by">Anyone with lewisu.edu can join</span>
+                                                </div>
+                                            </div>
+                                            <div class="p-expanding_workspace_list__workspaces">
+                                                <div class="p-workspace_info">
+                                                    <i class="c-team_icon p-workspace_info__icon" role="img" aria-label="Remote Academia 2020" style="height: 44px; width: 44px; min-width: 44px; font-size: 24px; line-height: 44px; white-space: nowrap; background-image: url(&quot;https://avatars.slack-edge.com/2020-03-11/993195284388_d7c7a374e68fb8218dab_88.jpg&quot;);"></i>
+                                                    <div class="p-workspace_info__content">
+                                                        <div class="p-workspace_info__title">
+                                                            Remote Academia 2020
+                                                        </div>
+                                                        <div class="p-workspace_info__members">
+                                                            <div class="avatar_stack">
+                                                                <img class="avatar" src="https://avatars.slack-edge.com/2021-02-01/1700823038803_6fdbdd960ab9a35a5e4e_48.jpg" alt="User Avatar">
+                                                                <img class="avatar" src="https://avatars.slack-edge.com/2021-02-10/1730827105382_507ae0da5a400fc88185_48.jpg" alt="User Avatar">
+                                                                <img class="avatar" src="https://avatars.slack-edge.com/2021-02-17/1762992415794_be238b0312386f24ba29_48.png" alt="User Avatar">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/1cee4590a6890c34f114b46dc34afbd8.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0017-48.png" alt="User Avatar">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/b72fb0c052c7930ac57b6f2d95d6c903.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0013-48.png" alt="User Avatar">
+                                                            </div>
+                                                            <div class="count">
+                                                                13,314 members
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="p-workspace_info__action">
+                                                        <a target="_blank" class="c-link c-button c-button--outline c-button--medium p-workspaces_list__invitation_join_button" data-qa="domain_enabled_workspace_join_button" href="https://join.slack.com/t/remoteacademia/signup_confirmed/enQtMTA1NjEwMDE0ODc3MS00Mjc3MzBiMjIzZmMxZWJjYTdiMjgzM2RlNDU4ZGU5MjNmZjRhOGE4ZGFjOTI0ZGNhMDFkYjNiZTg1ODY4YzVk?" rel="noopener noreferrer">Join</a>
+                                                    </div>
+                                                </div>
+                                                <br />
+                                                <div class="p-workspace_info">
+                                                    <i class="c-team_icon p-workspace_info__icon" role="img" aria-label="MadHacks 2017" style="height: 44px; width: 44px; min-width: 44px; font-size: 24px; line-height: 44px; white-space: nowrap; background-image: url(&quot;https://avatars.slack-edge.com/2017-01-26/133204284931_d994d4cf5aa9472304a4_88.png&quot;);"></i>
+                                                    <div class="p-workspace_info__content">
+                                                        <div class="p-workspace_info__title">
+                                                            MadHacks 2017
+                                                        </div>
+                                                        <div class="p-workspace_info__members">
+                                                            <div class="avatar_stack">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/243a9dc6d3fab99032571fa393840bdd.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0021-48.png" alt="User Avatar">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/61bdc66248ec03d394b6752f33762bc9.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0019-48.png" alt="User Avatar">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/f0c5793e9f2a8c89535be9540c920c82.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-48.png" alt="User Avatar">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/7a7b4fa578ced78e4d7b1cdec944742d.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0012-48.png" alt="User Avatar">
+                                                                <img class="avatar" src="https://secure.gravatar.com/avatar/203a5553458dbf890dbea579f41c138c.jpg?s=48&amp;d=https%3A%2F%2Fa.slack-edge.com%2Fdf10d%2Fimg%2Favatars%2Fava_0023-48.png" alt="User Avatar">
+                                                            </div>
+                                                            <div class="count">
+                                                                440 members
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="p-workspace_info__action">
+                                                        <a target="_blank" class="c-link c-button c-button--outline c-button--medium p-workspaces_list__invitation_join_button" data-qa="domain_enabled_workspace_join_button" href="https://join.slack.com/t/madhacks2017/signup_confirmed/enQtMTA1NjEwMDE0OTUwNy0yMDRjZTJjNTBjZTE0MTIxZmJmNzFmZDhhNzk5ZDM3NWVkYmRkMGVhYjZjNWQ3YjBiNWM1NjY4YTRiYjQ2NTU2?" rel="noopener noreferrer">Join</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="c-button-unstyled p-expanding_workspace_list__expander" data-qa="expand_workspace_list" type="button">
+                                                Show 18 more workspaces
+                                                <i class="c-icon c-icon--chevron-down" type="chevron-down" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="large_top_margin p-get_started_creator_landing__try_different_email">
+                                <div class="text">
+                                    <i class="c-icon c-icon--search" type="search" aria-hidden="true"></i>Not seeing your workspace?
+                                </div>
+                                <a target="_self" class="c-link c-button c-button--outline c-button--medium" href="/get-started#/createnew" rel="noopener noreferrer">Try a Different Email</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="p-refreshed_page__footer">
+            <a target="_blank" class="c-link c-button-unstyled p-refreshed_page__footer_link p-refreshed_page__footer_link--main" href="/legal" rel="noopener noreferrer">Privacy &amp; Terms</a>
+            &nbsp;&nbsp;
+            <a target="_blank" class="c-link c-button-unstyled p-refreshed_page__footer_link p-refreshed_page__footer_link--main" href="/help/contact" rel="noopener noreferrer">Contact Us</a>
+            @*<div class="" aria-haspopup="true">
+                    <a target="_blank" class="c-link c-button-unstyled p-refreshed_page__footer_link p-refreshed_page__footer_link--main" href="#" rel="noopener noreferrer">
+                        <i class="c-icon margin_right_25 c-icon--globe c-icon--inherit" type="globe" aria-hidden="true"></i>Change region
+                        <i class="c-icon c-icon--chevron-medium-down c-icon--inherit" type="chevron-medium-down" aria-hidden="true"></i>
+                    </a>
+                </div>*@
+        </footer>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#AddWorkspace").click(function () {
+                $.ajax({
+                    type: 'GET',
+                    url: '@Url.Action("Create_WorkSpace","WorkSpace")',
+                    datatype: 'json',
+                    success: function () {
+                      
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
